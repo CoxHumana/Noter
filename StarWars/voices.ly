@@ -6,7 +6,7 @@ TenorOne =  \relative c'' {
     \clef "treble" \key c \major \numericTimeSignature\time 4/4 R1*2
     \bar ".|:"
     \HideStems
-    c8^\markup{\small{\italic{Individual tempo, repeat ad lib.}}} d bes4 bes, f' |
+    c8 ^ \markup{\small{\italic{Individual tempo, repeat ad lib.}}} d bes4 bes, f' |
     \ShowStems
     \bar ":|."
     c'4 d2.( ~ |

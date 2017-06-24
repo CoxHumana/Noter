@@ -5,19 +5,14 @@
 \include "../Plugins/merge-rests.ily"
 \include "voices.ly"
 
+%\include "lyrics-dk.ly"
 \include "lyrics-no.ly"
 %\include "lyrics-de.ly"
 
 \header {
   copyright = "Eivind Michael Skretting"
-  title = "Spiseseddelen"
+  title = \songTitle
   composer = "C. Zöllner"
-}
-
-\layout {
-  \context { \Score
-             skipBars = ##t
-  }
 }
 
 % The score definition
@@ -25,39 +20,48 @@
   <<
     \new ChoirStaff
     <<
-      \new Staff
-      <<
-        \clef bass
-        \set Staff.instrumentName = "Solo"
-        \context Staff <<
-          \context Voice = "Solo" { \Solo }
-          \new Lyrics \lyricsto "Solo" \SoloLyrics
-        >>
-      >>
+
+      \new Lyrics = "TenorOneLyrics"
       \new Staff <<
         \key bes \major
         \mergeRestsOn
         \set Staff.instrumentName = "Tenor"
         \context Staff <<
-          \context Voice = "TenorOne" { \voiceOne \TenorOne }
-          \new Lyrics \lyricsto "TenorOne" \TenorOneLyrics
-          \context Voice = "TenorTwo" { \voiceTwo \TenorTwo }
-          \new Lyrics \lyricsto "TenorTwo" \TenorTwoLyrics
+          \context Voice = "TenorOne" { \voiceOne << \global \TenorOneSeparate \TenorOne >> }
+          \context Voice = "TenorTwo" { \voiceTwo << \global \TenorOneSeparate \TenorTwo >> }
         >>
       >>
+      \new Lyrics = "TenorTwoLyrics" \with {
+        \override VerticalAxisGroup.staff-affinity = #CENTER
+      }
+
+      \new Lyrics = "SoloLyrics"
+      \new Lyrics = "BassOneLyrics"
       \new Staff <<
         \key bes \major
         \clef bass
         \mergeRestsOn
         \set Staff.instrumentName = "Bass"
         \context Staff <<
-          \context Voice = "BassOne" { \voiceOne \BassOne }
-          %\new Lyrics \lyricsto "BassOne" \BassOneLyrics
-          \context Voice = "BassTwo" { \voiceTwo \BassTwo }
+          \context Voice = "Solo" { \voiceOne \Solo }
+          \context Voice = "BassOne" { \voiceOne << \global \BassOne >> }
+          \context Voice = "BassTwo" { \voiceTwo << \global \BassTwo >> }
         >>
       >>
+      \new Lyrics = "BassTwoLyrics"
+
+      \context Lyrics = "TenorOneLyrics" \lyricsto "TenorOne" \tenorOneWords
+      \context Lyrics = "TenorTwoLyrics" \lyricsto "TenorTwo" \tenorTwoWords
+      \context Lyrics = "SoloLyrics" \lyricsto "Solo" \soloWords
+      \context Lyrics = "BassOneLyrics" \lyricsto "BassOne" \bassOneWords
+      \context Lyrics = "BassTwoLyrics" \lyricsto "BassTwo" \bassTwoWords
     >>
   >>
-  \layout {}
+\layout {
+  \context { \Score
+             skipBars = ##t
+  }
+}
+
   \midi {}
 }
