@@ -3,8 +3,8 @@
 \paper {
   % paper-width = 21.0\cm
   % paper-height = 29.7\cm
-  % top-margin = 1.0\cm
-  % bottom-margin = 2.0\cm
-  % left-margin = 1.0\cm
-  % right-margin = 1.0\cm
+  top-margin = 1.0\cm
+  bottom-margin = 2.0\cm
+  left-margin = 2.0\cm
+  right-margin = 1.5\cm
 }
