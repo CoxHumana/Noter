@@ -6,8 +6,8 @@
 \include "voices.ly"
 
 %\include "lyrics-dk.ly"
-\include "lyrics-no.ly"
-%\include "lyrics-de.ly"
+%\include "lyrics-no.ly"
+\include "lyrics-de.ly"
 
 \header {
   copyright = "Eivind Michael Skretting"
@@ -28,7 +28,9 @@
         \set Staff.instrumentName = "Tenor"
         \context Staff <<
           \context Voice = "TenorOne" { \voiceOne << \global \TenorOneSeparate \TenorOne >> }
-          \context Voice = "TenorTwo" { \voiceTwo << \global \TenorOneSeparate \TenorTwo >> }
+          %\context Voice = "TenorTwo" { \voiceTwo << \global \TenorTwoSeparate \TenorTwo >> }
+          %\context Voice = "TenorOne" { \voiceOne << \global \TenorOne >> }
+          \context Voice = "TenorTwo" { \voiceTwo << \global \TenorTwo >> }
         >>
       >>
       \new Lyrics = "TenorTwoLyrics" \with {

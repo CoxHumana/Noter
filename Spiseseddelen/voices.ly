@@ -8,20 +8,28 @@ global = {
 Solo =  \relative c {
   \autoBeamOff
   % Intro / "oppvarter"
-  r4 r8. f16-"SOLO" f4 f8. r16 |
-  r4 r8. f16-"SOLO" f4 f8. r16 |
-  r2 r8. f16-"SOLO" f8. c'16 |
-  bes4 r r2 |
-  r1 |
+  r4 r8. f16-"SOLO" f4 f8. s16 |
+
+  s4 s8. f16-"SOLO" f4 f8. s16 |
+
+  s2 s8. f16-"SOLO" f8. c'16 |
+
+  bes4 s s2 |
+
+  s1 |
+
 }
 
 TenorOne =  \relative c' {
   \autoBeamOff
 
   % Intro / "oppvarter"
-  r2 r4 r8. a'16^"TUTTI" |
-  a8 a r4 r  r8. c16^"TUTTI" |
-  c4 c r2 |
+  r2 r4 r8. a'16^"TUTTI" |
+
+  a8 a r4 r  r8. c16^"TUTTI" |
+
+  c4 c r2 |
+
   r4 r8. f,16^"TUTTI" f4 r8. d'16 |
   d2\fermata c\fermata |
 
@@ -171,7 +179,8 @@ TenorOneSeparate = \relative c' {
     \autoBeamOff
     % Intro / "oppvarter"
     r2 r4 r8. f'16 |
-    f8 f r4 r  r8. a16 |
+    f8 f r4 r  r8. a16 |
+
     a4 a r2 |
     r4 r8. f16 f4 r8. bes16 |
     bes2\fermata a\fermata |
