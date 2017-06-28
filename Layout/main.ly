@@ -1,5 +1,5 @@
 #(set-global-staff-size 19.0750126457)
-#(set-default-paper-size "a4")
+#(set-default-paper-size "a5")
 \paper {
   % paper-width = 21.0\cm
   % paper-height = 29.7\cm
