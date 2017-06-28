@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+ #(ly:set-option 'relative-includes #t)
+
 \include "../Layout/main.ly"
 
 \include "../Plugins/merge-rests.ily"
