@@ -12,7 +12,8 @@
 \include "lyrics-de.ly"
 
 \header {
-  copyright = "Eivind Michael Skretting"
+  %copyright = "Eivind Michael Skretting"
+  tagline = ""
   title = \songTitle
   composer = "C. Zöllner"
 }

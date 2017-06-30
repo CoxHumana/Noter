@@ -5,7 +5,7 @@
 \include "voices.ly"
 
 \header {
-  copyright = "Cox Humana"
+  %copyright = "Cox Humana"
   title = "Star Wars (John Williams is the man)"
   composer = "John Williams/arr. MisterTim"
 }
