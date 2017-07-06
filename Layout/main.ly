@@ -5,9 +5,9 @@
   % paper-height = 29.7\cm
   print-page-number = ##f
   top-margin = 1.0\cm
-  bottom-margin = 6.0\cm
-  left-margin = 3.0\cm
-  right-margin = 3.0\cm
+  bottom-margin = 3.0\cm
+  left-margin = 2\cm
+  right-margin = 2\cm
 }
 
 \header {
