@@ -19,10 +19,10 @@
 	\context {
 	  \Lyrics
 	  % **** Prevents lyrics from running too close together
-	  \override LyricSpace #'minimum-distance = #0.8
+	  %\override LyricSpace #'minimum-distance = #0.8
 	  % **** Makes the text of lyrics a little smaller
-	  \override LyricText #'font-size = #-1
+	  %\override LyricText #'font-size = #-1
 	  % **** Moves lines of lyrics closer together
-	  \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+	  %\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
 	}
 }
