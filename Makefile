@@ -1,22 +1,11 @@
 
-vals:
+build-vals:
 	cd WahlinVals; lilypond score.ly;
-hymne:
+build-hymne:
 	cd LieHymne; lilypond score.ly;
-starwars:
+build-starwars:
 	cd StarWars; lilypond score.ly;
-seddel:
+build-seddel:
 	cd Spiseseddelen; lilypond score.ly;
 
-build-scores: vals hymne starwars seddel
-
-book: 
-	cd Book; pdflatex main.tex; pdflatex main.tex
-
-book-all: build-scores book
-
-update-vals: vals book
-update-hymne: hymne book
-update-starwars: starwars book
-update-seddel: seddel book
-
+build-all: build-vals build-hymne build-starwars build-seddel
